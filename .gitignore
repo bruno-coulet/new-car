@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# environement virtuel
+new_car_venv/
+# dossier data.gitignore
+raw_data/
+
+
 # C extensions
 *.so
 
@@ -127,14 +133,6 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject
