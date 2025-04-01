@@ -109,8 +109,8 @@ https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 
 ####  Distribution des données (histogramme).
 
-####  Tracé catplot, expliquez dans quel cas ce type de tracé est
-pertinent.
+####  Tracé catplot
+Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
 
 ####  Quantifiez la relation entre l'âge et le prix de vente.
 
