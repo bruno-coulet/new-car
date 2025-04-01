@@ -117,13 +117,29 @@ Ce type de tracé est pertinent  pour afficher les relations entre une variable 
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
 ![variables qualitatives](img/prix_age_type.png)
 ####  Quantifiez la relation entre l'âge et le prix de vente.
-Le prix de vente semble correlé positivement avec le prix de départ-usine et négativement avec l'âge du véhicule :
-![Matrice de corrélation](img/matrice_correlation.png)
+
 ####  Réalisez une veille sur la régression linéaire.
 
 ####  Est-ce que notre jeux de données est adapté à ce type d'algorithme ?
 
 ####  Existe-t-il une corrélation linéaire (corrélation de Pearson) entre les variables ?
+La conversion de variables qualitatives en variables quantitatives pour calculer une matrice de corrélation n'est pas pertinente.
+Il vaut mieux n'utiliser que les variables quantitatives ou ordinal ( Owner ) du jeu de données :
+- Car_Age
+- Selling_Price
+- Present_Price
+- Kms_Driven
+- Owner
+
+Le prix de vente semble correlé positivement avec :
+- le prix de départ-usine
+
+Le prix de vente semble correlé négativement avec :
+- l'âge du véhicule
+- le nombre de propriétaire
+- les km parcourus impactent faiblement le prix
+![Matrice de corrélation](img/matrice_correlation.png)
+
 
 ####  Proposez un outil de visualisation de Matplotlib permettant d'appuyer votre argumentation.
 
