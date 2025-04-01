@@ -7,6 +7,9 @@ Exercice de régression linéaire
 - [algorithme utilisé](#algorithme_de_regressio_lineaire_univariee)
 - [conclusion](#conclusion)
 
+
+## Contexte
+
 **Fichier source :**
 https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 
