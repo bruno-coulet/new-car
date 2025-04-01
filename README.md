@@ -108,7 +108,10 @@ https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 </div>
 
 ####  Distribution des données (histogramme).
-
+variables quantitatives continues
+![variables quantitatives continues](image.png)
+variables qualitatives
+![variables qualitatives](image-1.png)
 ####  Tracé catplot
 Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
 
