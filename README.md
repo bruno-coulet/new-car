@@ -15,9 +15,110 @@ https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 
 ## Exploration des données
 
-- Quelle est la taille du jeu de données ?
+- Taille du jeu de données
+
+301 entrées, 9 colonnes
+
+1 variable numérique : Year **peut être convertie en age**
+3 variables quantitatives continues : Selling_Price, Present_Price, Kms_Driven
+4 variables qualitatives : Car_Name, Fuel_Type, Seller_Type, Transmission
+1 variable catégorielle (ordinale, pas continue) : Owner
 
 - Statistiques de base (moyenne, médiane, quartile)
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Selling_Price</th>
+      <th>Present_Price</th>
+      <th>Kms_Driven</th>
+      <th>Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>301.000000</td>
+      <td>301.000000</td>
+      <td>301.000000</td>
+      <td>301.000000</td>
+      <td>301.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2013.627907</td>
+      <td>4.661296</td>
+      <td>7.628472</td>
+      <td>36947.205980</td>
+      <td>0.043189</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.891554</td>
+      <td>5.082812</td>
+      <td>8.644115</td>
+      <td>38886.883882</td>
+      <td>0.247915</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2003.000000</td>
+      <td>0.100000</td>
+      <td>0.320000</td>
+      <td>500.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2012.000000</td>
+      <td>0.900000</td>
+      <td>1.200000</td>
+      <td>15000.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2014.000000</td>
+      <td>3.600000</td>
+      <td>6.400000</td>
+      <td>32000.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2016.000000</td>
+      <td>6.000000</td>
+      <td>9.900000</td>
+      <td>48767.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2018.000000</td>
+      <td>35.000000</td>
+      <td>92.600000</td>
+      <td>500000.000000</td>
+      <td>3.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 - Distribution des données (histogramme).
 
