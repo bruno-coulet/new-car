@@ -150,6 +150,9 @@ Librairies :
 ○ Scipy
 ○ Scikit-Learn
 
+variable explicative : Car_Age
+variable cible : Selling_Price
+
 
 ## Amélioration du modèle
 en utilisant plusieurs variables d'entrée (Kms_Driven et Transmission)
