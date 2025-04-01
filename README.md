@@ -15,16 +15,16 @@ https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 
 ## Exploration des données
 
-- Taille du jeu de données
+#### Taille du jeu de données
 
 301 entrées, 9 colonnes
 
-1 variable numérique : Year **peut être convertie en age**
-3 variables quantitatives continues : Selling_Price, Present_Price, Kms_Driven
-4 variables qualitatives : Car_Name, Fuel_Type, Seller_Type, Transmission
-1 variable catégorielle (ordinale, pas continue) : Owner
+- 1 variable numérique : Year **peut être convertie en age**
+- 3 variables quantitatives continues : Selling_Price, Present_Price, Kms_Driven
+- 4 variables qualitatives : Car_Name, Fuel_Type, Seller_Type, Transmission
+- 1 variable catégorielle (ordinale, pas continue) : Owner
 
-- Statistiques de base (moyenne, médiane, quartile)
+#### Statistiques de base (moyenne, médiane, quartile)
 
 <div>
 <table border="1" class="dataframe">
@@ -107,20 +107,20 @@ https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 </table>
 </div>
 
-- Distribution des données (histogramme).
+####  Distribution des données (histogramme).
 
-- Tracé catplot, expliquez dans quel cas ce type de tracé est
+####  Tracé catplot, expliquez dans quel cas ce type de tracé est
 pertinent.
 
-- Quantifiez la relation entre l'âge et le prix de vente.
+####  Quantifiez la relation entre l'âge et le prix de vente.
 
-- Réalisez une veille sur la régression linéaire.
+####  Réalisez une veille sur la régression linéaire.
 
-- Est-ce que notre jeux de données est adapté à ce type d'algorithme ?
+####  Est-ce que notre jeux de données est adapté à ce type d'algorithme ?
 
-- Existe-t-il une corrélation linéaire (corrélation de Pearson) entre les variables ?
+####  Existe-t-il une corrélation linéaire (corrélation de Pearson) entre les variables ?
 
-- Proposez un outil de visualisation de Matplotlib permettant d'appuyer votre argumentation.
+####  Proposez un outil de visualisation de Matplotlib permettant d'appuyer votre argumentation.
 
 
 ## Algorithme de régression linéaire univariée
