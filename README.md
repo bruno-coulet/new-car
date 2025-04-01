@@ -109,12 +109,13 @@ https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
 
 ####  Distribution des données (histogramme).
 variables quantitatives continues
-![variables quantitatives continues](img/variables_quantitatives.png.png)
-variables qualitatives
-![variables qualitatives](img/variables_qualitatives.png.png)
+![variables quantitatives continues](img/variables_quantitatives.png)
+variables qualitatives et catégorielles
+![variables qualitatives](img/variables_qualitatives.png)
 ####  Tracé catplot
 Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
-
+Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
+![variables qualitatives](img/prix_age_type.png)
 ####  Quantifiez la relation entre l'âge et le prix de vente.
 
 ####  Réalisez une veille sur la régression linéaire.
