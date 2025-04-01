@@ -117,7 +117,8 @@ Ce type de tracé est pertinent  pour afficher les relations entre une variable 
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
 ![variables qualitatives](img/prix_age_type.png)
 ####  Quantifiez la relation entre l'âge et le prix de vente.
-
+Le prix de vente semble correlé positivement avec le prix de départ-usine et négativement avec l'âge du véhicule :
+![Matrice de corrélation](img/matrice_correlation.png)
 ####  Réalisez une veille sur la régression linéaire.
 
 ####  Est-ce que notre jeux de données est adapté à ce type d'algorithme ?
