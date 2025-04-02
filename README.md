@@ -157,13 +157,15 @@ Le prix de vente semble correlé négativement avec :
 
 ## Algorithme de régression linéaire univariée
 
-Librairies :
-○ Scipy
-○ Scikit-Learn
+Avec les ibrairies Scipy et Scikit-Learn.
 
-variable explicative : Car_Age
-variable cible : Selling_Price
-
+La **régression linéaire univariée** utilise **une seule variable explicative** : 
+||$$\boxed{𝑦=𝑎𝑋+𝑏}$$|
+|-|-|
+|𝑋 | variable explicative (ex. Present_Price)|
+|𝑦 | variable cible (Selling_Price)|
+|𝑎 | coefficient de la pente|
+|𝑏 |ordonnée à l'origine (intercept)|
 
 ## Amélioration du modèle
 en utilisant plusieurs variables d'entrée (Kms_Driven et Transmission)
