@@ -11,7 +11,18 @@ Exercice de régression linéaire
 ## Contexte
 
 **Fichier source :**
+
 https://drive.google.com/file/d/1vbls3IbkrZOOaAlXZWOpA4W8Mij4pEr7/view
+
+**Environnement virtuel :**
+
+Pour ce projet, l'environnement virtuel s'appelle `new_car_venv`
+La liste des dépendances nécessaires est listée dans le fichier [requirements.txt](requirements.txt)
+
+Pour exécuter les fichiers, il faut d'abord activer l'environnement avec la ligne de commande suivante :
+```bash
+$ source new_car_venv/Scripts/activate
+```
 
 ## Exploration des données
 

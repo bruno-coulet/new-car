@@ -7,6 +7,8 @@ __pycache__/
 new_car_venv/
 # dossier data.gitignore
 raw_data/
+# fichier de test
+test/
 
 
 # C extensions
