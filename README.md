@@ -174,6 +174,17 @@ df['Price_Category'] = df['Price_Category'].where(df['Price_Category'] <5, 5.0)
 ---
 
 **Standardisation des données**
+
+**MinMaxScaler**
+Ramene les données à l'intérieur d'un intervalle spécifique. Par défaut, la plus petite valeur sera ramenée à 0 et la plus grande à 1.
+**StandardScaler**
+Centrer les données sur 0 et/ou les ramener à un écart-type de 1.
+
+|Scaler|Objectif|Effet sur les données|Utilisation typique|
+|-|-|-|-|
+|StandardScaler	|Centre les données autour de 0 et ajuste l’écart-type à 1	|Peut produire des valeurs négatives et supérieures à 1	| Régression linéaire, SVM, K-Means, PCA|
+|MinMaxScaler	|Ramène les données dans un intervalle spécifique (souvent [0,1])|	Toutes les valeurs sont entre 0 et 1	| Réseaux de neurones, KNN, algos sensibles aux distances|
+
 ```python
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
