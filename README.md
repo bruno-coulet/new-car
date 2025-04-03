@@ -132,6 +132,41 @@ Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant 
 ####  Réalisez une veille sur la régression linéaire.
 
 ####  Est-ce que notre jeux de données est adapté à ce type d'algorithme ?
+Il y a plusieurs points à prendre en considération car il peuvent perturber la modélisation :<br>
+- Les variables ont des echelles différentes.
+- variables quantitative/qualitative/ordinale
+
+kilométrage minimum : 500
+kilométrage maximum : 500 000
+
+**Il faut standardiser les données**
+
+---
+**Stratification des données**
+Classer les prix en catégories en fonction d'un intervalle de 1.5 unités, avec un maximum de 5 catégories.
+Transforme une variable continue en variable catégorielle.
+```python
+df['Price_Category'] = np.ceil(df['Selling_Price'] / 1.5)
+df['Selling_Price'] / 1.5 
+```
+- Chaque valeur de Selling_Price est divisée par 1.5.
+- La fonction `ceil()` arrondit chaque valeur à l'entier supérieur.
+- Classification où chaque tranche de 1.5 unités de Selling_Price correspond à une nouvelle catégorie.
+
+```python
+df['Price_Category'] = df['Price_Category'].where(df['Price_Category'] <5, 5.0)
+```
+
+- Limitation des valeurs à un maximum de 5
+- Toutes les valeurs de Price_Category supérieures ou égales à 5 sont remplacées par 5.0.
+---
+
+**Standardisation des données**
+```python
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+df['Kms_Scaled'] = scaler.fit_transform(df[['Kms_Driven']])
+```
 
 ####  Existe-t-il une corrélation linéaire (corrélation de Pearson) entre les variables ?
 La conversion de variables qualitatives en variables quantitatives pour calculer une matrice de corrélation n'est pas pertinente.
@@ -149,6 +184,8 @@ Le prix de vente semble correlé négativement avec :
 - l'âge du véhicule
 - le nombre de propriétaire
 - les km parcourus impactent faiblement le prix
+
+**Il faut peut être les standardiser toutes les variables avant de chercher une corrélation**
 ![Matrice de corrélation](img/matrice_correlation.png)
 
 
