@@ -180,6 +180,8 @@ scaler = MinMaxScaler()
 df['Kms_Scaled'] = scaler.fit_transform(df[['Kms_Driven']])
 ```
 
+![Standardisation](img/standardisation.png)
+
 ####  Existe-t-il une corrélation linéaire (corrélation de Pearson) entre les variables ?
 La conversion de variables qualitatives en variables quantitatives pour calculer une matrice de corrélation n'est pas pertinente.
 Il vaut mieux n'utiliser que les variables quantitatives ou ordinal ( Owner ) du jeu de données :
