@@ -123,7 +123,18 @@ variables quantitatives continues
 ![variables quantitatives continues](img/variables_quantitatives.png)
 variables qualitatives et catégorielles
 ![variables qualitatives](img/variables_qualitatives.png)
-####  Tracé catplot
+
+
+**outliers**<br>
+Sur 300 observations, seulement 11 ont une valeur autre que 0 pour la variable Owner :<br>
+
+|Valeur de Owner|nombre d'observations|
+|-|-|
+|0 |   290|
+|1  |   10|
+|3  |    1|
+
+####  Tracé catplotOwner
 Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
 ![variables qualitatives](img/prix_age_type.png)
@@ -133,6 +144,7 @@ Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant 
 
 ####  Est-ce que notre jeux de données est adapté à ce type d'algorithme ?
 Il y a plusieurs points à prendre en considération car il peuvent perturber la modélisation :<br>
+
 - Les variables ont des echelles différentes.
 - variables quantitative/qualitative/ordinale
 
