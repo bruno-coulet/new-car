@@ -142,7 +142,27 @@ Ce type de tracé est pertinent  pour afficher les relations entre une variable 
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
 ![variables qualitatives](img/prix_age_type.png)
 
+## Normalisation
+Technique de prétraitement des données (aussi appelée standardisation).<br>
+Transforme les variables pour qu'elles aient une moyenne de 0 et un écart-type de 1.
+$$\boxed{\mu = 0 \text{ et }\sigma = 1 }$$
 
+**Avant normalisation**
+les coefficients des variables dans un modèle prédictif reflètent simplement l'influence des variables d'entrée (features) sur la variable cible dans leurs unités d'origine.<br>
+Cette représentation peut être trompeuse lorsque les variables ont des échelles ou des unités différentes.
+
+**Après normalisation**
+les coefficients des variables deviennent directement comparables entre eux. Ils indiquent leur influence relative sur le modèle.
+Un coefficient plus élevé en valeur absolue signifie que la variable correspondante a un impact plus important sur la prédiction, indépendamment de son échelle d'origine.
+
+
+- Améliore la convergence des algorithmes d'optimisation comme la descente de gradient
+- Permet d'éviter que certaines variables dominent le modèle uniquement en raison de leur amplitude
+- Facilite l'interprétation comparative des coefficients du modèle
+- Indispensable pour de nombreux algorithmes sensibles à l'échelle des données, comme les SVM ou les réseaux de neurones
+- Accélère l'apprentissage en favorisant un paysage d'optimisation plus régulier
+
+La normalisation est particulièrement importante dans les modèles multivariés, mais peut également apporter des bénéfices dans les cas univariés, notamment pour la stabilité numérique et l'interprétation des résultats.
 
 ### Données après traitement
 
