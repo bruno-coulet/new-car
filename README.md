@@ -4,6 +4,8 @@ Exercice de régression linéaire
 ## table des matière
 - [Contexte du projet](#contexte)
 - [Analyse de données](#exploration_des_donnees)
+- [Données avant traitement](#donnees_avant_traitement)
+- [Données après traitement](#donnees_apres_traitement)
 - [algorithme utilisé](#algorithme_de_regressio_lineaire_univariee)
 - [conclusion](#conclusion)
 
@@ -23,7 +25,7 @@ Pour exécuter les fichiers, il faut d'abord activer l'environnement avec la lig
 ```bash
 $ source new_car_venv/Scripts/activate
 ```
-
+---
 ## Exploration des données
 
 #### Taille du jeu de données
@@ -35,6 +37,7 @@ $ source new_car_venv/Scripts/activate
 - 4 variables qualitatives : Car_Name, Fuel_Type, Seller_Type, Transmission
 - 1 variable catégorielle (ordinale, pas continue) : Owner
 
+### Données avant traitement
 #### Statistiques de base (moyenne, médiane, quartile)
 
 <div>
@@ -138,6 +141,16 @@ Sur 300 observations, seulement 11 ont une valeur autre que 0 pour la variable O
 Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
 ![variables qualitatives](img/prix_age_type.png)
+
+
+
+### Données après traitement
+
+Insérer ici le describe après traitement des données
+
+---
+
+
 ####  Quantifiez la relation entre l'âge et le prix de vente.
 
 ####  Réalisez une veille sur la régression linéaire.
