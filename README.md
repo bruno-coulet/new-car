@@ -6,6 +6,7 @@ Exercice de régression linéaire
 - [Analyse de données](#exploration_des_donnees)
 - [Données avant traitement](#donnees_avant_traitement)
 - [Données après traitement](#donnees_apres_traitement)
+- [Standardisation des données](#standardisation_des_donnees)
 - [algorithme utilisé](#algorithme_de_regressio_lineaire_univariee)
 - [conclusion](#conclusion)
 
@@ -142,27 +143,7 @@ Ce type de tracé est pertinent  pour afficher les relations entre une variable 
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
 ![variables qualitatives](img/prix_age_type.png)
 
-## Normalisation
-Technique de prétraitement des données (aussi appelée standardisation).<br>
-Transforme les variables pour qu'elles aient une moyenne de 0 et un écart-type de 1.
-$$\boxed{\mu = 0 \text{ et }\sigma = 1 }$$
 
-**Avant normalisation**
-les coefficients des variables dans un modèle prédictif reflètent simplement l'influence des variables d'entrée (features) sur la variable cible dans leurs unités d'origine.<br>
-Cette représentation peut être trompeuse lorsque les variables ont des échelles ou des unités différentes.
-
-**Après normalisation**
-les coefficients des variables deviennent directement comparables entre eux. Ils indiquent leur influence relative sur le modèle.
-Un coefficient plus élevé en valeur absolue signifie que la variable correspondante a un impact plus important sur la prédiction, indépendamment de son échelle d'origine.
-
-
-- Améliore la convergence des algorithmes d'optimisation comme la descente de gradient
-- Permet d'éviter que certaines variables dominent le modèle uniquement en raison de leur amplitude
-- Facilite l'interprétation comparative des coefficients du modèle
-- Indispensable pour de nombreux algorithmes sensibles à l'échelle des données, comme les SVM ou les réseaux de neurones
-- Accélère l'apprentissage en favorisant un paysage d'optimisation plus régulier
-
-La normalisation est particulièrement importante dans les modèles multivariés, mais peut également apporter des bénéfices dans les cas univariés, notamment pour la stabilité numérique et l'interprétation des résultats.
 
 ### Données après traitement
 
@@ -184,8 +165,46 @@ Il y a plusieurs points à prendre en considération car il peuvent perturber la
 kilométrage minimum : 500
 kilométrage maximum : 500 000
 
-**Il faut standardiser les données**
+**Il faut standardiser ou normaliser les données**
+## Normalisation des données
+Technique de prétraitement des données (aussi appelée standardisation).
+Transforme les variables pour qu'elles aient une **moyenne de 0** et un **écart-type de 1**.
+$$\boxed{\mu = 0 \text{ et }\sigma = 1 }$$
 
+**Avant normalisation**
+les coefficients des variables dans un modèle prédictif reflètent simplement l'influence des variables d'entrée (features) sur la variable cible dans leurs unités d'origine.<br>
+Cette représentation peut être trompeuse lorsque les variables ont des échelles ou des unités différentes.
+
+**Après normalisation**
+les coefficients des variables deviennent directement comparables entre eux. Ils indiquent leur influence relative sur le modèle.
+Un coefficient plus élevé en valeur absolue signifie que la variable correspondante a un impact plus important sur la prédiction, indépendamment de son échelle d'origine.
+
+
+- Améliore la convergence des algorithmes d'optimisation comme la descente de gradient
+- Permet d'éviter que certaines variables dominent le modèle uniquement en raison de leur amplitude
+- Facilite l'interprétation comparative des coefficients du modèle
+- Indispensable pour de nombreux algorithmes sensibles à l'échelle des données, comme les SVM ou les réseaux de neurones
+- Accélère l'apprentissage en favorisant un paysage d'optimisation plus régulier
+
+La normalisation est particulièrement importante dans les modèles multivariés, mais peut également apporter des bénéfices dans les cas univariés, notamment pour la stabilité numérique et l'interprétation des résultats.
+<br>
+**MinMaxScaler**
+Ramene les données à l'intérieur d'un intervalle spécifique. Par défaut, la plus petite valeur sera ramenée à 0 et la plus grande à 1.
+**StandardScaler**
+Centrer les données sur 0 et/ou les ramener à un écart-type de 1.
+
+|Scaler|Objectif|Effet sur les données|Utilisation typique|
+|-|-|-|-|
+|StandardScaler	|Centre les données autour de 0 et ajuste l’écart-type à 1	|Peut produire des valeurs négatives et supérieures à 1	| Régression linéaire, SVM, K-Means, PCA|
+|MinMaxScaler	|Ramène les données dans un intervalle spécifique (souvent [0,1])|	Toutes les valeurs sont entre 0 et 1	| Réseaux de neurones, KNN, algos sensibles aux distances|
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+df['Kms_Scaled'] = scaler.fit_transform(df[['Kms_Driven']])
+```
+
+![Standardisation](img/standardisation.png)
 ---
 **Stratification des données**
 Classer les prix en catégories en fonction d'un intervalle de 1.5 unités, avec un maximum de 5 catégories.
@@ -206,25 +225,6 @@ df['Price_Category'] = df['Price_Category'].where(df['Price_Category'] <5, 5.0)
 - Toutes les valeurs de Price_Category supérieures ou égales à 5 sont remplacées par 5.0.
 ---
 
-**Standardisation des données**
-
-**MinMaxScaler**
-Ramene les données à l'intérieur d'un intervalle spécifique. Par défaut, la plus petite valeur sera ramenée à 0 et la plus grande à 1.
-**StandardScaler**
-Centrer les données sur 0 et/ou les ramener à un écart-type de 1.
-
-|Scaler|Objectif|Effet sur les données|Utilisation typique|
-|-|-|-|-|
-|StandardScaler	|Centre les données autour de 0 et ajuste l’écart-type à 1	|Peut produire des valeurs négatives et supérieures à 1	| Régression linéaire, SVM, K-Means, PCA|
-|MinMaxScaler	|Ramène les données dans un intervalle spécifique (souvent [0,1])|	Toutes les valeurs sont entre 0 et 1	| Réseaux de neurones, KNN, algos sensibles aux distances|
-
-```python
-from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler()
-df['Kms_Scaled'] = scaler.fit_transform(df[['Kms_Driven']])
-```
-
-![Standardisation](img/standardisation.png)
 
 ####  Existe-t-il une corrélation linéaire (corrélation de Pearson) entre les variables ?
 La conversion de variables qualitatives en variables quantitatives pour calculer une matrice de corrélation n'est pas pertinente.
