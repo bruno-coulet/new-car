@@ -6,7 +6,7 @@ __pycache__/
 # environement virtuel
 new_car_venv/
 # dossier data.gitignore
-raw_data/
+data/
 # fichier de test
 test/
 
