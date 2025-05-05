@@ -141,6 +141,7 @@ Sur 300 observations, seulement 11 ont une valeur autre que 0 pour la variable O
 ####  Tracé catplotOwner
 Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
 Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :<br>
+
 ![variables qualitatives](img/prix_age_type.png)
 
 
@@ -149,19 +150,6 @@ Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant 
 
 Ci dessous l'output de `.describe` après traitement des données
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
