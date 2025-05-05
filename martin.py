@@ -28,11 +28,11 @@ df['Car_Age'] = current_year - df['Year']
 df['Price_Category'] = np.ceil(df['Selling_Price'] / 1.5)
 df['Price_Category'] = df['Price_Category'].where(df['Price_Category'] < 5, 5.0)
 
-# Standardisation
+# Standardisation de : Present_Price, Kms_Driven, Car_Age
 scaler = StandardScaler()
 df[['Present_Price_Std', 'Kms_Std', 'Car_Age_Std']] = scaler.fit_transform(df[['Present_Price', 'Kms_Driven', 'Car_Age']])
 
-# Encodage des variables catégorielles
+# Conversion des variables qualitatives en variables quantitatives
 df["Fuel_Type_numeric"] = df["Fuel_Type"].map({"Petrol": 1, "Diesel": 2, "CNG": 3})
 df["Seller_Type_numeric"] = df["Seller_Type"].map({"Dealer": 1, "Individual": 2})
 df["Transmission_numeric"] = df["Transmission"].map({"Manual": 0, "Automatic": 1})
@@ -40,6 +40,8 @@ df["Transmission_numeric"] = df["Transmission"].map({"Manual": 0, "Automatic": 1
 # Dataset standardisé pour entraînement
 df_std = df[['Car_Age_Std', 'Selling_Price', 'Price_Category', 'Present_Price_Std', 'Kms_Std',
              "Fuel_Type_numeric", "Seller_Type_numeric", "Transmission_numeric"]]
+
+
 
 # Features / Target
 X = df_std.drop(['Selling_Price'], axis=1)
@@ -54,6 +56,7 @@ for train_index, test_index in split.split(df_std, df_std['Price_Category']):
 # Division X / y
 X_train = strat_train.drop(["Selling_Price", "Price_Category"], axis=1)
 y_train = strat_train["Selling_Price"]
+
 X_test = strat_test.drop(["Selling_Price", "Price_Category"], axis=1)
 y_test = strat_test["Selling_Price"]
 
@@ -73,8 +76,8 @@ martin_transmission = 0      # 0 = boîte manuelle (voir mapping)
 # ==== 2. Standardisation des valeurs de Martin ====
 # Note : scaler a été entraîné sur ['Present_Price', 'Kms_Driven', 'Car_Age']
 # On utilise 0 pour Present_Price juste pour respecter l’ordre
-martin_raw_values = [[0, martin_kms, martin_age]]
-present_price_std, kms_std, age_std = scaler.transform(martin_raw_values)[0]
+martin_df = pd.DataFrame([[0, martin_kms, martin_age]], columns=['Present_Price', 'Kms_Driven', 'Car_Age'])
+present_price_std, kms_std, age_std = scaler.transform(martin_df)[0]
 
 # ==== 3. Filtrage dans le DataFrame standardisé ====
 df_martin = df_std[
