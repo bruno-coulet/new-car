@@ -81,8 +81,8 @@ present_price_std, kms_std, age_std = scaler.transform(martin_df)[0]
 
 # ==== 3. Filtrage dans le DataFrame standardisé ====
 df_martin = df_std[
-    (df_std['Car_Age_Std'] <= age_std) &      # Âge max respecté
-    (df_std['Kms_Std'] <= kms_std) &          # Kilométrage max respecté
+    (df_std['Car_Age_Std'] <= martin_age) &      # Âge max respecté
+    (df_std['Kms_Std'] <= martin_kms) &          # Kilométrage max respecté
     (df_std['Transmission_numeric'] == martin_transmission)  # Boîte manuelle
 ]
 
