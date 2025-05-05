@@ -140,14 +140,167 @@ Sur 300 observations, seulement 11 ont une valeur autre que 0 pour la variable O
 
 ####  Tracé catplotOwner
 Ce type de tracé est pertinent  pour afficher les relations entre une variable numérique et une ou plusieurs variables catégorielles.
-Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :
+Ci-dessous le prix de vente suivant l'âge du véhicule et le type de carburant :<br>
 ![variables qualitatives](img/prix_age_type.png)
 
 
 
 ### Données après traitement
 
-Insérer ici le describe après traitement des données
+Ci dessous l'output de `.describe` après traitement des données
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Car_Name</th>
+      <th>Year</th>
+      <th>Selling_Price</th>
+      <th>Present_Price</th>
+      <th>Kms_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Seller_Type</th>
+      <th>Transmission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>251</td>
+      <td>251.000000</td>
+      <td>251.000000</td>
+      <td>251.000000</td>
+      <td>251.000000</td>
+      <td>251</td>
+      <td>251</td>
+      <td>251</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>87</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>city</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Petrol</td>
+      <td>Dealer</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>25</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>208</td>
+      <td>163</td>
+      <td>230</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>NaN</td>
+      <td>2014.175299</td>
+      <td>3.936375</td>
+      <td>6.166068</td>
+      <td>30724.864542</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>2.101701</td>
+      <td>3.096530</td>
+      <td>4.856053</td>
+      <td>20015.591801</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>NaN</td>
+      <td>2009.000000</td>
+      <td>0.160000</td>
+      <td>0.320000</td>
+      <td>500.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>NaN</td>
+      <td>2013.000000</td>
+      <td>0.925000</td>
+      <td>1.230000</td>
+      <td>15000.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>NaN</td>
+      <td>2015.000000</td>
+      <td>3.750000</td>
+      <td>5.900000</td>
+      <td>29000.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>NaN</td>
+      <td>2016.000000</td>
+      <td>5.875000</td>
+      <td>9.400000</td>
+      <td>45000.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>NaN</td>
+      <td>2018.000000</td>
+      <td>12.900000</td>
+      <td>20.450000</td>
+      <td>88000.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ---
 
